@@ -17,4 +17,6 @@ return {
   { "elixir-editors/vim-elixir" },
   { "nvim-telescope/telescope-fzf-native.nvim" },
   { "andymass/vim-matchup" },
+  { "ggandor/leap.nvim", enabled = false },
+  { "ggandor/flit.nvim", enabled = false },
 }
