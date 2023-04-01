@@ -1,4 +1,13 @@
 return {
+  {
+    "RRethy/nvim-base16",
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "base16-tomorrow-night",
+    },
+  },
   { "kylechui/nvim-surround" },
   { "gbprod/substitute.nvim" },
   { "tpope/vim-fugitive" },
