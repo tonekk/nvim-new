@@ -84,3 +84,6 @@ map("n", "<leader>ee", ":!elixir % <CR>", { desc = "💧 execute current file wi
 
 local telescope = require("telescope")
 map("n", "<leader>nh", telescope.extensions.notify.notify, { desc = "Notification history" })
+
+-- Closing buffers
+map("n", "<leader>X", ":bd<CR>", { desc = "(X) close current buffer" })
