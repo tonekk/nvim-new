@@ -15,6 +15,7 @@ vim.keymap.del("i", "<A-j>")
 vim.keymap.del("i", "<A-k>")
 vim.keymap.del("v", "<A-j>")
 vim.keymap.del("v", "<A-k>")
+vim.keymap.del("i", "<Tab>")
 
 -- NvimTmuxNavigation
 local nvim_tmux_nav = require("nvim-tmux-navigation")
