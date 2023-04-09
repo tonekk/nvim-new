@@ -222,7 +222,14 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
-      indent = { enable = true, disable = { "python", "ruby" } },
+      indent = {
+        enable = true,
+        disable = { "python", "ruby" },
+      },
+      highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = { "ruby" },
+      },
     },
   },
 }
