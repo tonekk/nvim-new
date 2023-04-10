@@ -10,3 +10,4 @@ vim.o.timeoutlen = 500
 vim.o.ttimeoutlen = 10
 vim.o.swapfile = false
 vim.o.mouse = ""
+vim.o.wrap = true
