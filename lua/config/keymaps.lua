@@ -88,3 +88,7 @@ map("n", "<leader>nh", telescope.extensions.notify.notify, { desc = "Notificatio
 
 -- Closing buffers
 map("n", "<leader>X", ":bd<CR>", { desc = "(X) close current buffer" })
+
+map("n", "<Esc>", function()
+  require("notify").dismiss({ silent = true, pending = true })
+end, { desc = "Dismiss notifications" })
