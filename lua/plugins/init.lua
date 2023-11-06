@@ -90,22 +90,6 @@ return {
       }
     end,
   },
-  {
-    "jose-elias-alvarez/null-ls.nvim",
-    opts = function()
-      local nls = require("null-ls")
-      return {
-        root_dir = require("null-ls.utils").root_pattern(".null-ls-root", ".neoconf.json", "Makefile", ".git"),
-        sources = {
-          nls.builtins.formatting.stylua,
-          nls.builtins.formatting.shfmt,
-          nls.builtins.diagnostics.rubocop,
-          nls.builtins.formatting.mix,
-          nls.builtins.diagnostics.credo,
-        },
-      }
-    end,
-  },
   { "nvim-neo-tree/neo-tree.nvim", enabled = false },
   {
     "nvim-tree/nvim-tree.lua",
@@ -130,7 +114,6 @@ return {
         adaptive_size = false,
         side = "left",
         width = 50,
-        hide_root_folder = true,
         preserve_window_proportions = true,
       },
       git = {
@@ -224,6 +207,26 @@ return {
       highlight = {
         enable = true,
         additional_vim_regex_highlighting = { "ruby" },
+      },
+    },
+  },
+  {
+    "stevearc/conform.nvim",
+    opts = {
+      formatters_by_ft = {
+        javascript = { "prettier" },
+        typescript = { "prettier" },
+        typescriptreact = { "prettier" },
+        javascriptreact = { "prettier" },
+        json = { "prettier" },
+        html = { "prettier" },
+        css = { "prettier" },
+        scss = { "prettier" },
+        markdown = { "prettier" },
+        yaml = { "prettier" },
+        lua = { "stylua" },
+        ruby = { "rubocop" },
+        elixir = { "mix" },
       },
     },
   },
