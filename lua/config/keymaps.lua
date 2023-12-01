@@ -64,16 +64,11 @@ map("n", "S", substitute.eol, { desc = "   substitute until eol" })
 map("v", "s", substitute.visual, { desc = "   substitute visual selection" })
 
 -- testing
-map(
-  "n",
-  "<leader>rf",
-  ':let @+ = "bundle exec rspec " . expand("%") <CR>',
-  { desc = "ﭧ copy test file with rspec cmd" }
-)
+map("n", "<leader>rf", ':let @+ = "bin/rspec " . expand("%") <CR>', { desc = "ﭧ copy test file with rspec cmd" })
 map(
   "n",
   "<leader>rn",
-  ':let @+ = "bundle exec rspec " . expand("%") . ":" . line(".") <CR>',
+  ':let @+ = "bin/rspec " . expand("%") . ":" . line(".") <CR>',
   { desc = "ﭧ copy nearest test for rspec" }
 )
 map("n", "<leader>tf", ':let @+ = expand("%") <CR>', { desc = "ﭧ copy test file" })

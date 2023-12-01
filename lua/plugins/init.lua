@@ -230,4 +230,17 @@ return {
       },
     },
   },
+  {
+    "mfussenegger/nvim-lint",
+    opts = {
+      linters_by_ft = {
+        ruby = { "rubocop" },
+        elixir = { "mix" },
+        javascript = { "eslint" },
+        typescript = { "eslint" },
+        typescriptreact = { "eslint" },
+        javascriptreact = { "eslint" },
+      },
+    },
+  },
 }
