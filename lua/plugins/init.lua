@@ -10,21 +10,23 @@ return {
   },
   { "kylechui/nvim-surround" },
   { "gbprod/substitute.nvim" },
-  { "tpope/vim-fugitive" },
   { "tpope/vim-rails" },
   { "f-person/git-blame.nvim" },
   { "alexghergh/nvim-tmux-navigation" },
   { "elixir-editors/vim-elixir" },
-  { "nvim-telescope/telescope-fzf-native.nvim" },
-  { "andymass/vim-matchup" },
   { "ggandor/leap.nvim", enabled = false },
   { "ggandor/flit.nvim", enabled = false },
   { "echasnovski/mini.pairs", enabled = false },
+  {
+    "nvim-telescope/telescope-fzf-native.nvim",
+    build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+  },
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
         "ruby",
+        "lua",
       },
     },
   },
@@ -35,7 +37,6 @@ return {
       ensure_installed = {
         "stylua",
         "shfmt",
-        "rubocop",
         "elixir-ls",
         "solargraph",
       },
