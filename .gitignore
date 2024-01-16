@@ -6,3 +6,6 @@ debug
 foo.*
 *.log
 data
+mason
+lazy
+telescope_history
