@@ -26,3 +26,4 @@ require("lazy").setup({
 
 vim.opt.swapfile = false
 vim.opt.backup = false
+vim.opt.clipboard = "unnamedplus"
