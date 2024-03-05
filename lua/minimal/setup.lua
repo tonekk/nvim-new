@@ -27,3 +27,4 @@ require("lazy").setup({
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.clipboard = "unnamedplus"
+vim.api.nvim_set_keymap("i", "<C-a>", "<NOP>", { noremap = true, silent = true })
