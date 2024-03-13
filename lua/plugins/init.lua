@@ -1,14 +1,23 @@
 return {
   {
-    "RRethy/nvim-base16",
+    "navarasu/onedark.nvim",
+    config = function()
+      require("onedark").setup({
+        style = "warmer",
+      })
+      require("onedark").load()
+    end,
   },
   {
     "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "base16-tomorrow-night",
-    },
   },
-  { "kylechui/nvim-surround" },
+  {
+    "kylechui/nvim-surround",
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({})
+    end,
+  },
   { "gbprod/substitute.nvim" },
   { "tpope/vim-rails" },
   { "f-person/git-blame.nvim" },
@@ -16,6 +25,7 @@ return {
   { "elixir-editors/vim-elixir" },
   { "ggandor/leap.nvim", enabled = false },
   { "ggandor/flit.nvim", enabled = false },
+  { "folke/flash.nvim", enabled = false },
   { "echasnovski/mini.pairs", enabled = false },
   {
     "nvim-telescope/telescope-fzf-native.nvim",
