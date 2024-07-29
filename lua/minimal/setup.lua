@@ -26,10 +26,15 @@ require("lazy").setup({
   },
 })
 
+vim.g.mapleader = " "
+
 vim.keymap.set("n", "s", require("substitute").operator, { noremap = true })
 vim.keymap.set("n", "ss", require("substitute").line, { noremap = true })
 vim.keymap.set("n", "S", require("substitute").eol, { noremap = true })
 vim.keymap.set("x", "s", require("substitute").visual, { noremap = true })
+
+vim.keymap.set("n", "<leader>rf", ':let @+ = "bin/rspec " . expand("%") <CR>', { noremap = true })
+vim.keymap.set("n", "<leader>rn", ':let @+ = "bin/rspec " . expand("%") . ":" . line(".") <CR>', { noremap = true })
 
 vim.opt.swapfile = false
 vim.opt.backup = false
