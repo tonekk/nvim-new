@@ -18,7 +18,13 @@ return {
       require("nvim-surround").setup({})
     end,
   },
-  { "gbprod/substitute.nvim" },
+  {
+    "gbprod/substitute.nvim",
+    version = "*",
+    config = function()
+      require("substitute").setup({})
+    end,
+  },
   { "tpope/vim-rails" },
   { "f-person/git-blame.nvim" },
   { "alexghergh/nvim-tmux-navigation" },
